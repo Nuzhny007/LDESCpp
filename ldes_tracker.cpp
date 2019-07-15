@@ -447,7 +447,7 @@ cv::Mat LDESTracker::getFeatures(const cv::Mat & patch, cv::Mat& han, int* sizes
 cv::Mat LDESTracker::getPixFeatures(const cv::Mat& patch, int* size) {
 	int h = patch.rows, w = patch.cols;
 	cv::Mat features(patch.channels(), w*h, CV_32F);
-	vector<cv::Mat > planes(3);
+	std::vector<cv::Mat > planes(3);
 	cv::split(patch, planes);
 	planes[0].reshape(1, 1).copyTo(features.row(0));
 	planes[1].reshape(1, 1).copyTo(features.row(1));

@@ -99,7 +99,7 @@ cv::Mat phaseCorrelation(cv::Mat& x1, cv::Mat& x2, int h, int w, int channel) {
 		cv::sqrt(real(d), d);
 		d += 2.2204e-16;
 		//d = complexDivision(xy_temp, d);
-		vector<cv::Mat> planes = { d,d };
+		std::vector<cv::Mat> planes = { d,d };
 		cv::merge(planes, d2);
 		cv::divide(xy_temp, d2, xy_temp);
 		//xy_temp = complexDivision(xy_temp, d2);

@@ -1,7 +1,6 @@
 #pragma once
 #include <opencv2/opencv.hpp>
 #include <iostream>
-using namespace std;
 
 cv::Mat gaussianCorrelation(cv::Mat& x1, cv::Mat& x2, int h, int w, int channel, float sigma);
 

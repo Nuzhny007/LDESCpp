@@ -1,7 +1,6 @@
 #pragma once
 #include <opencv2/opencv.hpp>
 #include <iostream>
-using namespace std;
 
 cv::Mat fftd(const cv::Mat& img, bool reverse = false);
 

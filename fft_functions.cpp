@@ -4,7 +4,7 @@ cv::Mat fftd(const cv::Mat& img, bool reverse) {
 	cv::Mat tmp;
 	if (img.channels() == 1)
 	{
-		vector<cv::Mat> planes = { cv::Mat_<float>(img), cv::Mat_<float>::zeros(img.size()) };
+		std::vector<cv::Mat> planes = { cv::Mat_<float>(img), cv::Mat_<float>::zeros(img.size()) };
 		//cv::Mat planes[] = {cv::Mat_<double> (img), cv::Mat_<double>::zeros(img.size())};
 		cv::merge(planes, tmp);
 	}
